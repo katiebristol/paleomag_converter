@@ -29,7 +29,7 @@ for currentInput in inputList:
                 next_line_array = next_line_array[0:8] #Remove trailing columns
 
                 next_line_array[3] = float(next_line_array[3])*25/pi #Convert from Oe to A/m (Cryo assumes 10cc vol.)
-                next_line = " ".join(str(x) for x in next_line_array).replace("Cm","A") #Array to string, replacing Cm with T
+                next_line = " ".join(str(x) for x in next_line_array).replace("Cm","A") #Array to string, replacing Cm with A
                 write_file.write(str(next_line.replace(' ', '\t'))+'\n') #output format is tab-delimited
             except IndexError:
                 print("Index out of range error on this:")
