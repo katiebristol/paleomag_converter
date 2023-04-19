@@ -1,5 +1,3 @@
-# paleomag_converter
-A basic Python script to convert individual sample files previously made by Data Splitter into generic PmagPy format for IZZI. Output files are compatible with PmagPy or paleomagnetism.org. 
 # PaleoMag Converter
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
@@ -8,7 +6,7 @@ A basic Python script to convert individual sample files previously made by Data
 
 This script was created to convert individual sample files previously
 made by Data Splitter into generic PmagPy format. Files produced by this 
-script can be used with PmagPy and paleomagnetism.org. Field intensity
+script can be used with PmagPy Demag GUI and paleomagnetism.org. Field intensity
 is output in A/m assuming a sample volume of 10cc. 
 
 ![Demo data.](/assets/input-output.png)
@@ -17,8 +15,11 @@ is output in A/m assuming a sample volume of 10cc.
 
 1) Put individual sample files (such as those split by [Data Splitter](https://github.com/katiebristol/data_splitter)) that you want 
 converted into the /input/ folder.
-2) Run the script
-3) Check the /output/ folder for your converted files. 
+2) Set AF or thermal demag via line 32 (default is AF):
+```next_line = " ".join(str(x) for x in next_line_array).replace("Cm","A")``` for AF demag
+```next_line = " ".join(str(x) for x in next_line_array).replace("Cm","T")``` for thermal demag
+3) Run the script
+4) Check the /output/ folder for your converted files. 
 
 ## Inputs
 
