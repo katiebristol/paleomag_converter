@@ -17,9 +17,13 @@ is output in A/m assuming a sample volume of 10cc.
 converted into the /input/ folder.
 2) Set AF or thermal demag via line 32 (default is AF):
 
-For AF demag: ```next_line = " ".join(str(x) for x in next_line_array).replace("Cm","A")``` 
+        For AF demag: 
+        
+        ```next_line = " ".join(str(x) for x in next_line_array).replace("Cm","A")``` 
 
-For Thermal demag: ```next_line = " ".join(str(x) for x in next_line_array).replace("Cm","T")``` 
+        For Thermal demag: 
+        
+        ```next_line = " ".join(str(x) for x in next_line_array).replace("Cm","T")``` 
 
 3) Run the script
 4) Check the /output/ folder for your converted files. 
