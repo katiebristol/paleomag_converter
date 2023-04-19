@@ -16,8 +16,11 @@ is output in A/m assuming a sample volume of 10cc.
 1) Put individual sample files (such as those split by [Data Splitter](https://github.com/katiebristol/data_splitter)) that you want 
 converted into the /input/ folder.
 2) Set AF or thermal demag via line 32 (default is AF):
+
 ```next_line = " ".join(str(x) for x in next_line_array).replace("Cm","A")``` for AF demag
+
 ```next_line = " ".join(str(x) for x in next_line_array).replace("Cm","T")``` for thermal demag
+
 3) Run the script
 4) Check the /output/ folder for your converted files. 
 
